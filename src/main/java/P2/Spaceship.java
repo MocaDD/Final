@@ -12,11 +12,9 @@ class Spaceship {
     private HashSet<String> crewMembers = new HashSet<>();
     private HashMap<String, Integer> foodPerDayForEveryMember = new HashMap<>();
 
-
     Spaceship(int foodOnBoard) {
         this.foodOnBoard = foodOnBoard;
     }
-
 
     public void board(String crewMemberName, int foodPerDay) {
         foodPerDayForEveryMember.put(crewMemberName, foodPerDay);

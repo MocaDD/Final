@@ -8,7 +8,6 @@ public class Application {
         HashMap<String, String> hashMap1 = new HashMap<>();
         HashMap<String, String> hashMap2 = new HashMap<>();
 
-
         hashMap1.put("Smith", "949–0504");
         hashMap1.put("Marty", "206–9024");
         hashMap2.put("Marty", "206–9024");
@@ -18,7 +17,6 @@ public class Application {
 
         System.out.println(isSubMap(hashMap1, hashMap2));
     }
-
 
     private static boolean isSubMap(HashMap<String, String> hashMap1, HashMap<String, String> hashMap2) {
 
