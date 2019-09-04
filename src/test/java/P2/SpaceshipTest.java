@@ -33,11 +33,12 @@ public class SpaceshipTest {
 
     @Test
     public void getPlanetsVisited() {
-        mySpaceship.board("Nolan", 3);
-        mySpaceship.board("Nick", 4);
+        mySpaceship.board("Nolan", 1);
 
-        assertTrue(mySpaceship.flyTo("Venus", 7));
-        assertEquals(mySpaceship.getPlanetsVisited(), "[Venus]");
+        mySpaceship.flyTo("Mars", 1);
+        mySpaceship.flyTo("Venus", 1);
+
+        assertEquals(mySpaceship.getPlanetsVisited(), "[Mars, Venus]");
     }
 
     @Test

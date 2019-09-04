@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-public class Spaceship {
+class Spaceship {
 
     private int foodOnBoard;
     private List<String> visitedPlanets = new ArrayList<>();
@@ -13,7 +13,7 @@ public class Spaceship {
     private HashMap<String, Integer> foodPerDayForEveryMember = new HashMap<>();
 
 
-    public Spaceship(int foodOnBoard) {
+    Spaceship(int foodOnBoard) {
         this.foodOnBoard = foodOnBoard;
     }
 
@@ -42,10 +42,10 @@ public class Spaceship {
     public boolean flyTo(String planetName, int daysRequired) {
 
         int foodRequiredPerDay = 0;
-        int foodRequiredForTrip = 0;
+        int foodRequiredForTrip;
 
         for (String key : foodPerDayForEveryMember.keySet()) {
-            foodRequiredPerDay = foodRequiredPerDay + foodPerDayForEveryMember.get(key);
+            foodRequiredPerDay += foodPerDayForEveryMember.get(key);
         }
 
         foodRequiredForTrip = foodRequiredPerDay * daysRequired;
@@ -60,8 +60,7 @@ public class Spaceship {
         }
     }
 
-
-    public HashSet<String> getCrewMembers() {
+    HashSet<String> getCrewMembers() {
         return crewMembers;
     }
 }
