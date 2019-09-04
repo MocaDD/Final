@@ -13,7 +13,12 @@ class Spaceship {
     private HashMap<String, Integer> foodPerDayForEveryMember = new HashMap<>();
 
     Spaceship(int foodOnBoard) {
-        this.foodOnBoard = foodOnBoard;
+
+        if (foodOnBoard > 0)    {
+            this.foodOnBoard = foodOnBoard;
+        } else {
+            throw new IllegalArgumentException("The amount of food shall be grater than 0");
+        }
     }
 
     public void board(String crewMemberName, int foodPerDay) {
