@@ -10,6 +10,9 @@ public class Application {
 
         hashMap1.put("Smith", "949–0504");
         hashMap1.put("Marty", "206–9024");
+        hashMap1.put("Newton", "123– 4567");
+        hashMap1.put("Hawking", "123–4567");
+
         hashMap2.put("Marty", "206–9024");
         hashMap2.put("Hawking", "123–4567");
         hashMap2.put("Smith", "949–0504");
@@ -41,5 +44,15 @@ public class Application {
         } else {
             return false;
         }
+
+
+//        OR
+
+//        if (hashMap2.entrySet().containsAll(hashMap1.entrySet())) {
+//            return true;
+//        } else
+//            return false;
+
+
     }
 }
